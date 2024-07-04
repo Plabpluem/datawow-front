@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,17 +20,75 @@
 }
 
 body {
+  font-family: "Inter", sans-serif; 
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #BBC2C0;
 }
+
+input#search{
+  background-image: url(./image/search.png);
+  background-repeat: no-repeat;
+  text-indent: 20px;
+ }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .headerFont{
+    /* font-family: "Inter", sans-serif;  */
+    font-family: "Castoro", serif;;
+    font-style: italic;
+  }
+  .buttonFont{
+    font-family: "IBM Plex Sans Thai", sans-serif;
+  }
+  .searchInput{
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    background-image: url(./image/search.png);
+  }
+  .shadowBox{
+    box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.03);
+  }
+  .shadowBoxLg{
+    box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08);
+  }
+  .shadowModal{
+    box-shadow: 0 20px 24px -4px rgba(16, 24, 40, 0.08);
+  }
+  .shadowButton{
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  }
+  .onEnable{
+    opacity: 1;
+    animation: test 0.3s ease-in-out forwards;
+  }
+  .onDisable{
+    animation: none;
+  }
+  .onTransitionWide{
+    animation: wider 0.9s ease-in-out forwards;
+  }
+  .onDisableTransitionWide{
+    animation: none;
+  }
+
+  @keyframes test {
+    0%{
+      opacity: 100%;
+    }
+    100%{
+      opacity: 0;
+    }
+    
+  }
+
+  @keyframes wider {
+    30%{
+      width: 70%;
+    }
+    100%{
+      width: 100%;
+    }
   }
 }
